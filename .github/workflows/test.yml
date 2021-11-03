@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      - name: inside directory
+        run: ls -a
       - name: echo a string
         run: echo "hello Amin"
       - name: multi line run
@@ -31,6 +33,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: ["run-windows-command"]
     steps:
+      - name: inside directory
+        run: ls -a
       - name: what is installed
         run: |
           echo what is inside Directory
