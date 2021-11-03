@@ -1,0 +1,20 @@
+name: shell command
+
+on:  [push]
+
+jobs:
+  run-shell:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "hello Amin"
+      - name: multi line run
+        run: |
+          node -v
+          npm -v
+      - name: run python script
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
+      
