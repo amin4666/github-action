@@ -6,6 +6,7 @@ jobs:
   run-shell:
     runs-on: ubuntu-latest
     steps:
+      - uses: amin4666/github-action@master
       - name: echo a string
         run: echo "hello Amin"
       - name: multi line run
@@ -30,7 +31,14 @@ jobs:
     runs-on: ubuntu-latest
     needs: ["run-windows-command"]
     steps:
-      - name: get process
-        run: ps -ef
-
+      - name: what is installed
+        run: |
+          echo what is inside Directory
+          ls -a
+          echo java version
+          java -version
+          echo maven version
+          mvn --version
+          echo gradle version
+          gradle --version
       
