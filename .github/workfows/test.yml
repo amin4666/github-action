@@ -15,6 +15,7 @@ jobs:
       - name: run python script
         run: |
           import platform
-          print(platform.architecture())
+          print 
+          (platform.architecture())
         shell: python
       
