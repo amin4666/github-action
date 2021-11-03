@@ -12,9 +12,18 @@ jobs:
         run: |
           node -v
           npm -v
-      - name: mpython code
+      - name: python script
         run: |
           import platform
           print (platform.processor())
         shell: python
+  run-windows-command:
+    runs-on: windows-latest
+    steps:
+      - name: Directory Powershell
+        run: Get-Location
+      - name: Directory Bash
+        run: pwd
+        shell: bash
+
       
