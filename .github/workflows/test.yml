@@ -38,12 +38,12 @@ jobs:
         run: ls -a
       - name: what is installed
         run: |
-          echo what is inside Directory;
-          ls -a;
-          echo java version;
-          java -version;
-          echo maven version;
-          mvn --version;
-          echo gradle version;
+          echo what is inside Directory &&
+          ls -a &&
+          echo java version &&
+          java -version &&
+          echo maven version &&
+          mvn --version &&
+          echo gradle version &&
           gradle --version
       
