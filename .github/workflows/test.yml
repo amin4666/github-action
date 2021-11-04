@@ -35,7 +35,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: environmrnt variables
-        run: ./shell-commands.sh
+        run: sh ./shell-commands.sh
       - name: what is installed
         run: |
           echo what is inside Directory &&
