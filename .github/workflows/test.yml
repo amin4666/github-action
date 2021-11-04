@@ -34,8 +34,8 @@ jobs:
     needs: ["run-windows-command"]
     steps:
       - uses: actions/checkout@master
-      - name: inside directory
-        run: ls -a
+      - name: environmrnt variables
+        run: ./shell-commands.sh
       - name: what is installed
         run: |
           echo what is inside Directory &&
