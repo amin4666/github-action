@@ -38,7 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: ["run-windows-command"]
     env:
-      var2: ${{ secrets.FOO_TOKEN }}
+      var2: ${{ secrets.FOO_TOKEN1 }}
     steps:
       - uses: actions/checkout@master
       - name: environmrnt variables
